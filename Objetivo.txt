@@ -1,0 +1,6 @@
+Projeto para controle de horas por tarefas. O sistema consiste em um contador de tempo que pode ser iniciado junto com uma determinada tarefa; ficando simples de saber quando tempo foi gasto em um projeto ou quanto tempo o você gastou com distrações por exemplo.
+
+Sistema com o contador; WPF utilizando o padrão MVVM. Sistema de interface web para exibir as tarefas e gráficos demonstrando o tempo gasto. MVC 4 com Knockout.
+
+- Controlar tempo de tarefas no Icescrum.
+- Controlar lançamento de patidas de ponto do dia e verificar inconformidades de intervalos.
