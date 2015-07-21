@@ -1,4 +1,4 @@
-Sample.AngularJS
+Demo AngularJS
 ================
 
-Some demos for something with Angular.JS
+Some demos for something with Angular.JS and c# .Net API.
