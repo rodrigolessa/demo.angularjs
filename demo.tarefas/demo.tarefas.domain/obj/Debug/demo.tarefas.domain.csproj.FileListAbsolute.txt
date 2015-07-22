@@ -1,0 +1,9 @@
+D:\Projetos\demo.angularjs\demo.tarefas\demo.tarefas.domain\bin\Debug\demo.tarefas.domain.dll.config
+D:\Projetos\demo.angularjs\demo.tarefas\demo.tarefas.domain\bin\Debug\demo.tarefas.domain.dll
+D:\Projetos\demo.angularjs\demo.tarefas\demo.tarefas.domain\bin\Debug\demo.tarefas.domain.pdb
+D:\Projetos\demo.angularjs\demo.tarefas\demo.tarefas.domain\bin\Debug\EntityFramework.dll
+D:\Projetos\demo.angularjs\demo.tarefas\demo.tarefas.domain\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projetos\demo.angularjs\demo.tarefas\demo.tarefas.domain\bin\Debug\EntityFramework.xml
+D:\Projetos\demo.angularjs\demo.tarefas\demo.tarefas.domain\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projetos\demo.angularjs\demo.tarefas\demo.tarefas.domain\obj\Debug\demo.tarefas.domain.dll
+D:\Projetos\demo.angularjs\demo.tarefas\demo.tarefas.domain\obj\Debug\demo.tarefas.domain.pdb
