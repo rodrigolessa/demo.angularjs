@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demo.apptarefa.api", "demo.apptarefa.api\demo.apptarefa.api.csproj", "{4E1D47C7-17B8-4E4A-AAFE-CBBE3CAABE0F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Arquitetura e Design", "0 - Arquitetura e Design", "{92394A03-6992-4C8D-9B03-11C2E313862B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Apresentação", "1 - Apresentação", "{B42B1CBB-ED57-429B-AF9E-B610A1440C2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Serviços Distribuidos", "2 - Serviços Distribuidos", "{24741E5C-A46C-4337-BC69-F0BCA6C7B7FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Aplicação", "3 - Aplicação", "{28A5FFC6-4325-4A9D-BB1C-28B46329063B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domínio", "4 - Domínio", "{48C1339D-FAD1-41E9-91AD-5F5B968EFC93}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infraestrutura de Persistência", "5 - Infraestrutura de Persistência", "{4C1DAE03-96C7-4938-B6B5-A7381C4DDA13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Infraestrutura Vertical", "6 - Infraestrutura Vertical", "{24AE3B67-EA3E-48FC-8E0C-880350645F67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7 - Qualidade", "7 - Qualidade", "{7CA05F48-A8D8-4A06-B19A-F0BB9861041F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.1 - Testes Unitários", "7.1 - Testes Unitários", "{CEA4C3BB-F6A0-42FB-8A63-D79D0E3B193C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.2 - Testes de Carga", "7.2 - Testes de Carga", "{CA3405D8-074E-44E5-B590-DA9FA2425FD7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.3 - Testes de Integração", "7.3 - Testes de Integração", "{8BEFE158-23B1-4BCC-B7FA-10EFB9323AA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "7.4 - Testes de Interface", "7.4 - Testes de Interface", "{241BA4C1-F0A3-44EC-BA1A-16A8150E5246}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "8 - Scripts", "8 - Scripts", "{8A82FEA0-6D71-4A66-9E20-6D8072AD70B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "demo.apptarefa.domain", "demo.apptarefa.domain\demo.apptarefa.domain.csproj", "{F3A83F71-FEAD-4E42-AEC2-8CFB41EB2B53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E1D47C7-17B8-4E4A-AAFE-CBBE3CAABE0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E1D47C7-17B8-4E4A-AAFE-CBBE3CAABE0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E1D47C7-17B8-4E4A-AAFE-CBBE3CAABE0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E1D47C7-17B8-4E4A-AAFE-CBBE3CAABE0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3A83F71-FEAD-4E42-AEC2-8CFB41EB2B53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3A83F71-FEAD-4E42-AEC2-8CFB41EB2B53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3A83F71-FEAD-4E42-AEC2-8CFB41EB2B53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3A83F71-FEAD-4E42-AEC2-8CFB41EB2B53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4E1D47C7-17B8-4E4A-AAFE-CBBE3CAABE0F} = {24741E5C-A46C-4337-BC69-F0BCA6C7B7FA}
+		{F3A83F71-FEAD-4E42-AEC2-8CFB41EB2B53} = {48C1339D-FAD1-41E9-91AD-5F5B968EFC93}
+		{CEA4C3BB-F6A0-42FB-8A63-D79D0E3B193C} = {7CA05F48-A8D8-4A06-B19A-F0BB9861041F}
+		{CA3405D8-074E-44E5-B590-DA9FA2425FD7} = {7CA05F48-A8D8-4A06-B19A-F0BB9861041F}
+		{8BEFE158-23B1-4BCC-B7FA-10EFB9323AA8} = {7CA05F48-A8D8-4A06-B19A-F0BB9861041F}
+		{241BA4C1-F0A3-44EC-BA1A-16A8150E5246} = {7CA05F48-A8D8-4A06-B19A-F0BB9861041F}
+	EndGlobalSection
+EndGlobal
