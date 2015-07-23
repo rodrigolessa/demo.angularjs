@@ -10,7 +10,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/demo.apptarefa.api.dll">
-      <publishTime>07/23/2015 13:45:17</publishTime>
+      <publishTime>07/23/2015 15:34:53</publishTime>
     </File>
     <File Include="bin/demo.apptarefa.domain.dll">
       <publishTime>07/23/2015 11:28:02</publishTime>
