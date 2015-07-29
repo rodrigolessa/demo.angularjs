@@ -18,6 +18,7 @@ CREATE TABLE [dbo].[Funcionario](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[Nome] [varchar](50) NOT NULL,
 	[Email] [varchar](100) NULL,
+	[IdDoUsuarioIceScrum] [bigint] NULL,
 	[Situacao] [char](1) NULL
 )
 GO
@@ -41,8 +42,19 @@ GO
 CREATE TABLE [dbo].[Tarefa](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[IdFuncionario] [int] NOT NULL,
-	[Descricao] [varchar](100) NULL,
-	[Executada] [bit] NULL
+	[Titulo] [varchar](200) NULL,
+	[Descricao] [varchar](max) NULL,
+	[Executada] [bit] NULL,
+	[IdIceScrum] [bigint] NULL,
+	[Situacao] [char](1) NULL
+)
+GO
+
+CREATE TABLE [dbo].[IntervalosDeTarefa](
+	[Id] [bigint] IDENTITY(1,1) NOT NULL,
+	[IdTarefa] [int] NOT NULL,
+	[Inicio] [smalldatetime] NULL,
+	[Fim] [smalldatetime] NULL
 )
 GO
 
@@ -68,4 +80,11 @@ ALTER TABLE [dbo].[Tarefa] ADD CONSTRAINT [PK_Tarefa] PRIMARY KEY CLUSTERED ([Id
 GO
 
 ALTER TABLE [dbo].[Tarefa] ADD CONSTRAINT [FK_Tarefa_Funcionario] FOREIGN KEY([IdFuncionario]) REFERENCES [dbo].[Funcionario] ([Id])
+GO
+
+
+ALTER TABLE [dbo].[IntervalosDeTarefa] ADD CONSTRAINT [PK_IntervalosDeTarefa] PRIMARY KEY CLUSTERED ([Id] ASC)
+GO
+
+ALTER TABLE [dbo].[IntervalosDeTarefa] ADD CONSTRAINT [FK_Tarefa_IntervalosDeTarefa] FOREIGN KEY([IdTarefa]) REFERENCES [dbo].[Tarefa] ([Id])
 GO

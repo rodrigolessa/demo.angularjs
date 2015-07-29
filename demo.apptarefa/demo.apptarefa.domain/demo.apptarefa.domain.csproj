@@ -48,8 +48,10 @@
   <ItemGroup>
     <Compile Include="Models\Funcionario.cs" />
     <Compile Include="Models\Intervalo.cs" />
+    <Compile Include="Models\IntervalosDeTarefa.cs" />
     <Compile Include="Models\Mapping\FuncionarioMap.cs" />
     <Compile Include="Models\Mapping\IntervaloMap.cs" />
+    <Compile Include="Models\Mapping\IntervalosDeTarefaMap.cs" />
     <Compile Include="Models\Mapping\PontoMap.cs" />
     <Compile Include="Models\Mapping\TarefaMap.cs" />
     <Compile Include="Models\Ponto.cs" />

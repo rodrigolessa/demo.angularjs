@@ -18,6 +18,7 @@ namespace demo.apptarefa.domain.Models
 
         public DbSet<Funcionario> Funcionarios { get; set; }
         public DbSet<Intervalo> Intervaloes { get; set; }
+        public DbSet<IntervalosDeTarefa> IntervalosDeTarefas { get; set; }
         public DbSet<Ponto> Pontoes { get; set; }
         public DbSet<Tarefa> Tarefas { get; set; }
 
@@ -25,6 +26,7 @@ namespace demo.apptarefa.domain.Models
         {
             modelBuilder.Configurations.Add(new FuncionarioMap());
             modelBuilder.Configurations.Add(new IntervaloMap());
+            modelBuilder.Configurations.Add(new IntervalosDeTarefaMap());
             modelBuilder.Configurations.Add(new PontoMap());
             modelBuilder.Configurations.Add(new TarefaMap());
         }
