@@ -14,6 +14,10 @@ namespace demo.apptarefa.domain.Models.Mapping
             this.Property(t => t.Titulo)
                 .HasMaxLength(200);
 
+            this.Property(t => t.Situacao)
+                .IsFixedLength()
+                .HasMaxLength(1);
+
             // Table & Column Mappings
             this.ToTable("Tarefa");
             this.Property(t => t.Id).HasColumnName("Id");
@@ -22,6 +26,7 @@ namespace demo.apptarefa.domain.Models.Mapping
             this.Property(t => t.Descricao).HasColumnName("Descricao");
             this.Property(t => t.Executada).HasColumnName("Executada");
             this.Property(t => t.IdIceScrum).HasColumnName("IdIceScrum");
+            this.Property(t => t.Situacao).HasColumnName("Situacao");
 
             // Relationships
             this.HasRequired(t => t.Funcionario)

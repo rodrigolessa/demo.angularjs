@@ -3,6 +3,8 @@ GO
 
 /*	Trecho de Rollback do script:
 
+DROP TABLE [ProvaDeConceito].[dbo].[IntervalosDeTarefa];
+GO
 DROP TABLE [ProvaDeConceito].[dbo].[Tarefa];
 GO
 DROP TABLE [ProvaDeConceito].[dbo].[Intervalo];
@@ -81,7 +83,6 @@ GO
 
 ALTER TABLE [dbo].[Tarefa] ADD CONSTRAINT [FK_Tarefa_Funcionario] FOREIGN KEY([IdFuncionario]) REFERENCES [dbo].[Funcionario] ([Id])
 GO
-
 
 ALTER TABLE [dbo].[IntervalosDeTarefa] ADD CONSTRAINT [PK_IntervalosDeTarefa] PRIMARY KEY CLUSTERED ([Id] ASC)
 GO

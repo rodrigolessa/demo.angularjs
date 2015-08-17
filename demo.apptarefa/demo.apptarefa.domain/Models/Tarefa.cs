@@ -16,6 +16,7 @@ namespace demo.apptarefa.domain.Models
         public string Descricao { get; set; }
         public Nullable<bool> Executada { get; set; }
         public Nullable<long> IdIceScrum { get; set; }
+        public string Situacao { get; set; }
         public virtual Funcionario Funcionario { get; set; }
         public virtual ICollection<IntervalosDeTarefa> IntervalosDeTarefas { get; set; }
     }

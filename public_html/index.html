@@ -3,7 +3,8 @@
 	<head>
 		
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
-		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/angular/angular.min.js">angular</script>
+		<script src="bower_components/angular-route/angular-route.min.js">rotas</script>
 		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="bower_components/moment/min/moment-with-locales.min.js"></script>
 		<script src="bower_components/pace/pace.min.js"></script>
@@ -21,8 +22,8 @@
 		
 		<div ng-controller="TodoListController as todoList">
 			
-			<span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
-			[ <a href="" ng-click="todoList.archive()">archive</a> ]
+			<span>{{todoList.remaining()}} de {{todoList.todos.length}} restantes</span>
+			[ <a href="" ng-click="todoList.archive()">arquivar</a> ]
 			<ul class="unstyled">
 				<li ng-repeat="todo in todoList.todos">
 					<input type="checkbox" ng-model="todo.done">
@@ -31,8 +32,7 @@
 			</ul>
 			
 			<form ng-submit="todoList.addTodo()">
-				<input type="text" ng-model="todoList.todoText"  size="30"
-				placeholder="add new todo here">
+				<input type="text" ng-model="todoList.todoText"  size="30" placeholder="descreva uma tarefa">
 				<input class="btn-primary" type="submit" value="add">
 			</form>
 			
@@ -43,13 +43,3 @@
 		
 	</body>
 </html>
-
-<script>
-	
-	$(function(){
-		
-		moment().format();
-		
-		$("#stopwatch").text(moment("20150728", "YYYYMMDD").fromNow());
-	});
-</script>
