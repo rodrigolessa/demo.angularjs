@@ -1,0 +1,24 @@
+<h1 class="text-center">{{pagina}}</h1>
+
+		<h2>Tarefas</h2>
+		
+		<div ng-controller="TodoListController as todoList">
+			
+			<span>{{todoList.remaining()}} de {{todoList.todos.length}} restantes</span>
+			[ <a href="" ng-click="todoList.archive()">arquivar</a> ]
+			<ul class="unstyled">
+				<li ng-repeat="todo in todoList.todos">
+					<input type="checkbox" ng-model="todo.done">
+					<span class="done-{{todo.done}}">{{todo.text}}</span>
+				</li>
+			</ul>
+			
+			<form ng-submit="todoList.addTodo()">
+				<input type="text" ng-model="todoList.todoText"  size="30" placeholder="descreva uma tarefa">
+				<input class="btn-primary" type="submit" value="add">
+			</form>
+			
+		</div>
+		
+		<br/>
+		<span id="stopwatch">00:00:00</span>

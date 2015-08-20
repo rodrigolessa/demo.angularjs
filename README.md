@@ -18,5 +18,11 @@ Instalar os pacotes:
 * MomentJS - http://momentjs.com/
 * PACE - http://github.hubspot.com/pace/docs/welcome/
 
-No Visual Studio 2012, instalar "ASP.NET and Web Tools 2013.1 for Visual Studio 2012"
-http://www.microsoft.com/en-us/download/confirmation.aspx?id=41532
+Instalar o editor Code
+- https://code.visualstudio.com/
+Para o projeto Angular, utilizei o Visual Studio Code, mas é possível utilizar outro editor.
+
+No Visual Studio 2012, instalar "ASP.NET and Web Tools 2013.1 for Visual Studio 2012".
+- http://www.microsoft.com/en-us/download/confirmation.aspx?id=41532
+
+O Visual Studio 2013 ou superior, não precisa de plugins.

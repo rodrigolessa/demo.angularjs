@@ -1,26 +1,10 @@
 //* global $ */
 
-//TODO: Configurar rotas
-//var app = angular.module('app', ['ngRoute']);
-// function tarefaListaController($scope) {
-//   $scope.pagina = "home";
-// }
+var app = angular.module('controleDeTarefa', ['ngRoute']);
 
-//TODO: Injetando dependência, Controle
-// tarefaListaController.$inject = ['$scope'];
-// app.controller('tarefaListaController', tarefaListaController);
-
-//TODO: Definir rotas
-//app.config(function($routeProvider){
-//$routeProvider
-//.when('/',{controller:tarefaListaController,templateUrl:'tarefa.html'})
-//.when('/funcionario',{controller:funcionarioController,templateUrl:'funcionario.html'})
-//.otherwise({templateUrl:'404.html'})
-//});
-
-angular.module('tarefaApp', [])
-  .controller('TodoListController', function() {
-
+function tarefaController($scope) {
+  $scope.pagina = "inicio";
+  
   var self = this;
   
   self.todos = [
@@ -47,7 +31,37 @@ angular.module('tarefaApp', [])
       if (!todo.done) self.todos.push(todo);
     });
   };
+  
+}
 
+//TODO: Injetando dependência, Controle para listar tarefas
+tarefaController.$inject = ['$scope'];
+app.controller('tarefaController', tarefaController);
+
+
+function funcionarioController($scope) {
+  $scope.pagina = "Funcionário";
+}
+
+funcionarioController.$inject = ['$scope'];
+app.controller('funcionarioController', funcionarioController);
+
+
+function manterFuncionarioController($scope, $routeParams) {
+  $scope.pagina = "Novo Funcionário";
+  $scope.id = $routeParams.id;
+}
+
+manterFuncionarioController.$inject = ['$scope'];
+app.controller('manterFuncionarioController', manterFuncionarioController);
+
+//TODO: Definir rotas
+app.config(function($routeProvider) {
+  $routeProvider
+    .when('/',{controller:listarTarefaController,templateUrl:'tarefa.html'})
+    .when('/funcionario',{controller:funcionarioController,templateUrl:'funcionario.html'})
+    .when('/funcionari/:id',{controller:manterFuncionarioController,templateUrl:'manterFuncionario.html'})
+    .otherwise({templateUrl:'404.html'})
 });
 
 //TODO: Exibir contador progresivo de tempo de tarefa
