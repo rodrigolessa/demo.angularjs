@@ -2,6 +2,10 @@
 <html ng-app="controleDeTarefa">
 	<head>
 		
+		<title>Controle de Tarefas</title>
+		
+		<meta charset="UTF-8">
+		
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="bower_components/angular/angular.min.js">angular</script>
 		<script src="bower_components/angular-route/angular-route.min.js">rotas</script>
@@ -9,7 +13,10 @@
 		<script src="bower_components/moment/min/moment-with-locales.min.js"></script>
 		<script src="bower_components/pace/pace.min.js"></script>
 		
-		<script src="controleDeTarefa.js"></script>
+		<script src="tarefa.js"></script>
+		<script src="funcionario.js"></script>
+		<script src="manterFuncionario.js"></script>
+		<script src="app.js"></script>
 		
 		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="bower_components/pace/themes/blue/pace-theme-loading-bar.css">
@@ -18,7 +25,7 @@
 	</head>
 	<body>
 		
-		<a href="/">Início</a>
+		<a href="/tarefa">Início</a>
 		<a href="#/funcionario">Funcionários</a>
 		
 		<div ng-view></div>

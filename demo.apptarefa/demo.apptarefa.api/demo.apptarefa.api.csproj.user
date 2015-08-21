@@ -7,7 +7,7 @@
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_DbContextTypeFullName>demo.apptarefa.domain.Models.ProvaDeConceitoContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
-    <NameOfLastUsedPublishProfile>Release Local</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>Release HomeOffice</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

@@ -2,19 +2,19 @@
 
 		<h2>Tarefas</h2>
 		
-		<div ng-controller="TodoListController as todoList">
+		<div ng-controller="tarefaController as listarTarefas">
 			
-			<span>{{todoList.remaining()}} de {{todoList.todos.length}} restantes</span>
-			[ <a href="" ng-click="todoList.archive()">arquivar</a> ]
+			<span>{{listarTarefas.remaining()}} de {{listarTarefas.todos.length}} restantes</span>
+			[ <a href="" ng-click="listarTarefas.archive()">arquivar</a> ]
 			<ul class="unstyled">
-				<li ng-repeat="todo in todoList.todos">
+				<li ng-repeat="todo in listarTarefas.todos">
 					<input type="checkbox" ng-model="todo.done">
 					<span class="done-{{todo.done}}">{{todo.text}}</span>
 				</li>
 			</ul>
 			
-			<form ng-submit="todoList.addTodo()">
-				<input type="text" ng-model="todoList.todoText"  size="30" placeholder="descreva uma tarefa">
+			<form ng-submit="listarTarefas.addTodo()">
+				<input type="text" ng-model="listarTarefas.todoText"  size="30" placeholder="descreva uma tarefa">
 				<input class="btn-primary" type="submit" value="add">
 			</form>
 			
