@@ -5,14 +5,50 @@
 		<title>Controle de Tarefas</title>
 		
 		<meta charset="UTF-8">
+		<meta name="description" content=".Net Developer, Web Developer, Front-End Developer - Rodrigo Lessa" />
+		
+		<!--Google+ Metadata /-->
+		<meta itemprop="name" content="Rodrigo Lessa Web Developer" />
+		<meta itemprop="description" content=".Net Developer, Web Developer, Front-End Developer - Rodrigo Lessa" />
+		<meta name="Keywords" content="Rodrigo Lessa, web, desenvolvedor, programador, analista de sistemas, asp.net, .net, asp, php, javascript, actionscript, html, css, xml, web designer, flash design, web development, layout, ideas, creative, creativity, interface, navigation, network" />
+		<meta itemprop="image" content="http://rodrigolessa.com/lessa.jpg" />
+		
+		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+		
+		<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+		
+		<!-- Bibliotecas de scripts -->
 		
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		
+		<!-- Declarative Bindings -->
 		<script src="bower_components/angular/angular.min.js">angular</script>
 		<script src="bower_components/angular-route/angular-route.min.js">rotas</script>
+		
+		<!-- Layout -->
 		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		
+		<!-- Localização e funções para data e hora -->
 		<script src="bower_components/moment/min/moment-with-locales.min.js"></script>
+		
+		<!-- Loading Automático -->
 		<script src="bower_components/pace/pace.min.js"></script>
 		
+		<!--script src="js/libs/jquery.validate.min.js"></script>
+		<!--script src="js/libs/jquery.validate.unobtrusive.min.js"></script>
+		<!--script src="js/libs/jquery.mask.min.js"></script>
+	
+		<!-- Bloqueio de Tela -->
+		<!--script src="js/libs/jquery.blockUI.js"></script>
+	
+		<!--script src="js/libs/json2.js"></script>
+		
+		<!--script src="js/comuns.js"></script>
+	
+		<!--script src="js/extensions.js"></script-->
+		
+		<!-- Controller, Model and ViewModel-->
 		<script src="tarefa.js"></script>
 		<script src="funcionario.js"></script>
 		<script src="manterFuncionario.js"></script>
@@ -22,13 +58,219 @@
 		<link rel="stylesheet" href="bower_components/pace/themes/blue/pace-theme-loading-bar.css">
 		<link rel="stylesheet" href="content/demo.css">
 		
+		<style type="text/css">
+		
+			/* Extra small devices (phones, less than 768px) */
+			/* No media query since this is the default in Bootstrap */
+		
+			@media (max-width: @screen-xs-max) { }
+		
+			/* Small devices (tablets, 768px and up) */
+			@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { }
+		
+			/* Medium devices (desktops, 992px and up) */
+			@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { }
+		
+			/* Large devices (large desktops, 1200px and up) */
+			@media (min-width: @screen-lg-min) { }
+		
+		
+			table th
+			{
+				text-align: center;
+			}
+		
+			table td
+			{
+				text-align: center;
+			}
+		
+			.labelDiscreto
+			{
+				color: #ddd;
+			}
+		
+			.content-main
+			{
+				padding-top: 80px;
+				background-color: #F0FAFF;
+			}
+		
+			.container-narrow
+			{
+				margin: 0 auto;
+				max-width: 700px;
+			}
+		
+			.container-narrow > h2
+			{
+				font-weight: bold;
+			}
+		
+			.container-nivel
+			{
+				background-color: #F0FAFF;
+			}
+		
+			.container-divisor-base
+			{
+				background-color: #0088CC;
+			}
+		
+			.container-divisor-base h4
+			{
+				color: #fff;
+			}
+		
+			.my-icon
+			{
+				margin-right: 20px;
+			}
+		
+			.container-base
+			{
+				min-height: 100px;
+				background-color: #E6E6E6;
+			}
+		
+		</style>
+		
 	</head>
 	<body>
 		
-		<a href="/tarefa">Início</a>
-		<a href="#/funcionario">Funcionários</a>
+		<!-- Fixed navbar -->
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">controle de horas</a>
+			</div>
+			<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="Index.asp">início</a></li>
+				<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">usuários <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="ListarUsuario.asp">listar</a></li>
+					<li><a href="ManterUsuario.asp">incluir</a></li>
+				</ul>
+				</li>
+				<li><a href="#">feriados</a></li>
+				<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">calendários <b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="ListarTarefas.asp">tarefas</a></li>
+					<li><a href="#">dia</a></li>
+					<li><a href="#">mês</a></li>
+				</ul>
+				</li>
+			</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+		</div>
 		
-		<div ng-view></div>
+		<div class="container-fluid content-main">
+	
+			<div class="col-lg-12">
+	
+				<div class="container-narrow">
+	
+					<form class="form-inline" role="form" accept-charset="UTF-8" id="mainForm" method="post" data-bind="submit: adicionarTarefa">
+						
+						<a href="/tarefa">Início</a>
+						<a href="#/funcionario">Funcionários</a>
+						
+						<div ng-view></div>
+						
+						<div class="form-group">
+							<label class="sr-only" for="txtDescricao">tarefa</label>
+							<input type="text" id="txtDescricao" data-bind="value: descricaoNovaTarefa" placeholder="o que precisa ser feito?" class="form-control">
+						</div>
+						<button type="submit" class="btn btn-default">salvar</button>
+	
+					</form>
+	
+					<br />
+	
+					<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>&nbsp;</th>
+							<th>#</th>
+							<th>Lista de Tarefas (<span data-bind="text: tarefas().length"></span>)</th>
+							<th>&nbsp;</th>
+						</tr>
+					</thead>
+					<tbody data-bind="foreach: tarefas">
+						<tr>
+							<td><input type="checkbox" data-bind="checked: Executada" /></td>
+							<td data-bind="text: Id"></td>
+							<td data-bind="text: Descricao" class="text-left"></td>
+							<td><a href="#" data-bind="click: $root.removerTarefa, visible: !Executada()">excluir</a></td>
+						</tr>
+					</tbody>
+					</table>
+	
+					Você possui <b data-bind="text: tarefasIncompletas().length">&nbsp;</b> tarefa(s) incompletas!
+	
+				</div>
+	
+			</div>
+			<!--/span-->
+	
+		</div>
+		<!--/row-->
+	
+		<!-- NÍVEL / SENIOR //-->
+		<div class="row container-nivel">
+	
+			<div class="col-lg-12">
+	
+				<div class="container-narrow text-right">
+					<img src="content/my.icon2.png" width="82" height="82" class="my-icon">
+				</div>
+	
+			</div>
+	
+		</div>
+		<!--/row-->
+	
+		<div class="row container-divisor-base">
+	
+			<div class="col-lg-12">
+	
+				<div class="container-narrow text-left">
+					<h4 data-bind="text: loginUsuario">Rodrigo Lessa</h4>
+				</div>
+	
+			</div>
+	
+		</div>
+		<!--/row-->
+	
+		<div class="row container-base">
+	
+			<div class="col-lg-12">
+	
+				<div class="container-narrow">
+					...
+				</div>
+	
+			</div>
+	
+		</div>
+		<!--/row-->
+		
+		<!--div class="footer">
+			<p>&copy; Company 2014</p>
+		</div-->
 		
 	</body>
+	
 </html>
