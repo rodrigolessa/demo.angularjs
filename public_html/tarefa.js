@@ -1,11 +1,20 @@
-var tarefaController = function ($scope) {
+var tarefaController = function ($scope, $http, $rootScope) {
   $scope.pagina = "Início";
   
   var self = this;
+  var urlServico = $rootScope.urlServico;
+  
+  self.funcionario = {};
+  
+  $http.get(urlServico)
+    .success(function(result, status, headers, config) {
+      self.funcionario = result[0];
+    })
   
   self.todos = [
     {text:'learn angular', done:true},
-    {text:'build an angular app', done:false}];
+    {text:'build an angular app', done:false}
+  ];
   
   self.addTodo = function() {
     self.todos.push({text:self.todoText, done:false});
@@ -31,4 +40,4 @@ var tarefaController = function ($scope) {
 }
 
 // Injetando dependência
-tarefaController.$inject = ['$scope'];
+tarefaController.$inject = ['$scope', '$http', '$rootScope'];

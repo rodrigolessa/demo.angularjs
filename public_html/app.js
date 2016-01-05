@@ -15,11 +15,13 @@ app.config(function($routeProvider) {
     .otherwise({templateUrl:'404.html'})
 });
 
+//TODO: Definir propriedades para serem acessadas em qualquer parte da aplicação
+app.run(function($rootScope) {
+  $rootScope.urlServico = 'http://localhost/tarefa.service/api/funcionario';
+});
+
 //TODO: Exibir contador progresivo de tempo de tarefa
 // $(function(){
-// 
 //   moment().format();
-// 
 //   $("#stopwatch").text(moment("20150728", "YYYYMMDD").fromNow());
-// 
 // });

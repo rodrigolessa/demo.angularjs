@@ -4,12 +4,12 @@
 		
 		<div ng-controller="tarefaController as listarTarefas">
 			
-			<span>{{listarTarefas.remaining()}} de {{listarTarefas.todos.length}} restantes</span>
+			<span>{{listarTarefas.remaining()}} de {{listarTarefas.funcionario.Tarefas.length}} restantes</span>
 			[ <a href="" ng-click="listarTarefas.archive()">arquivar</a> ]
 			<ul class="unstyled">
-				<li ng-repeat="todo in listarTarefas.todos">
-					<input type="checkbox" ng-model="todo.done">
-					<span class="done-{{todo.done}}">{{todo.text}}</span>
+				<li ng-repeat="todo in listarTarefas.funcionario.Tarefas">
+					<input type="checkbox" ng-model="todo.Executada">
+					<span class="done-{{todo.Executada}}">{{todo.Descricao}}</span>
 				</li>
 			</ul>
 			
@@ -21,4 +21,5 @@
 		</div>
 		
 		<br/>
+		
 		<span id="stopwatch">00:00:00</span>
