@@ -17,7 +17,9 @@ app.config(function($routeProvider) {
 
 //TODO: Definir propriedades para serem acessadas em qualquer parte da aplicação
 app.run(function($rootScope) {
-  $rootScope.urlServico = 'http://localhost/tarefa.service/api/funcionario';
+  $rootScope.urlFuncionarioServico = 'http://localhost/tarefa.service/api/funcionario';
+  $rootScope.urlTarefaServico = 'http://localhost/tarefa.service/api/tarefa';
+  $rootScope.idDoFuncionarioLogado = 1;
 });
 
 //TODO: Exibir contador progresivo de tempo de tarefa

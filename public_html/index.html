@@ -140,40 +140,40 @@
 		
 		<!-- Fixed navbar -->
 		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-		<div class="container">
-			<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">controle de horas</a>
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">Controle</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="/tarefa">início</a></li>
+						<!--li class="dropdown">
+						<a href="javascript: void();" class="dropdown-toggle" data-toggle="dropdown">funcionários <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#/funcionario">listar</a></li>
+							<li><a href="#">incluir</a></li>
+							<li><a href="#/tarefa">tarefas</a></li>
+						</ul>
+						</li>
+						<li><a href="#">feriados</a></li>
+						<li class="dropdown">
+						<a href="javascript: void();" class="dropdown-toggle" data-toggle="dropdown">calendários <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">agendamentos</a></li>
+							<li><a href="#">dia</a></li>
+							<li><a href="#">mês</a></li>
+						</ul>
+						</li-->
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
 			</div>
-			<div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="/tarefa">início</a></li>
-				<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">funcionários <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li><a href="#/funcionario">listar</a></li>
-					<li><a href="#">incluir</a></li>
-					<li><a href="#/tarefa">tarefas</a></li>
-				</ul>
-				</li>
-				<li><a href="#">feriados</a></li>
-				<li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">calendários <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li><a href="#">agendamentos</a></li>
-					<li><a href="#">dia</a></li>
-					<li><a href="#">mês</a></li>
-				</ul>
-				</li>
-			</ul>
-			</div>
-			<!--/.nav-collapse -->
-		</div>
 		</div>
 		
 		<div class="container-fluid content-main">
@@ -181,42 +181,8 @@
 			<div class="col-lg-12">
 	
 				<div class="container-narrow">
-	
-					<form class="form-inline" role="form" accept-charset="UTF-8" id="mainForm" method="post" data-bind="submit: adicionarTarefa">
 						
-						<div ng-view></div>
-						
-						<!--div class="form-group">
-							<label class="sr-only" for="txtDescricao">tarefa</label>
-							<input type="text" id="txtDescricao" data-bind="value: descricaoNovaTarefa" placeholder="o que precisa ser feito?" class="form-control">
-						</div>
-						<button type="submit" class="btn btn-default">salvar</button-->
-	
-					</form>
-	
-					<br />
-	
-					<!--table class="table table-striped">
-					<thead>
-						<tr>
-							<th>&nbsp;</th>
-							<th>#</th>
-							<th>Lista de Tarefas (<span data-bind="text: tarefas().length"></span>)</th>
-							<th>&nbsp;</th>
-						</tr>
-					</thead>
-					<tbody data-bind="foreach: tarefas">
-						<tr>
-							<td><input type="checkbox" data-bind="checked: Executada" /></td>
-							<td data-bind="text: Id"></td>
-							<td data-bind="text: Descricao" class="text-left"></td>
-							<td><a href="#" data-bind="click: $root.removerTarefa, visible: !Executada()">excluir</a></td>
-						</tr>
-					</tbody>
-					</table>
-	
-					Você possui <b data-bind="text: tarefasIncompletas().length">&nbsp;</b> tarefa(s) incompletas!
-					-->
+					<div ng-view></div>
 	
 				</div>
 	
@@ -253,7 +219,7 @@
 		</div>
 		<!--/row-->
 	
-		<div class="row container-base">
+		<!--div class="row container-base">
 	
 			<div class="col-lg-12">
 	
@@ -263,7 +229,7 @@
 	
 			</div>
 	
-		</div>
+		</div-->
 		<!--/row-->
 		
 		<!--div class="footer">

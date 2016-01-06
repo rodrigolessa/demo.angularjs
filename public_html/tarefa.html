@@ -1,25 +1,48 @@
-<h1 class="text-center">{{pagina}}</h1>
+<!--h2>{{pagina}}</h2-->
 
-		<h2>Tarefas</h2>
-		
-		<div ng-controller="tarefaController as listarTarefas">
-			
-			<span>{{listarTarefas.remaining()}} de {{listarTarefas.funcionario.Tarefas.length}} restantes</span>
-			[ <a href="" ng-click="listarTarefas.archive()">arquivar</a> ]
-			<ul class="unstyled">
-				<li ng-repeat="todo in listarTarefas.funcionario.Tarefas">
-					<input type="checkbox" ng-model="todo.Executada">
-					<span class="done-{{todo.Executada}}">{{todo.Descricao}}</span>
-				</li>
-			</ul>
-			
-			<form ng-submit="listarTarefas.addTodo()">
-				<input type="text" ng-model="listarTarefas.todoText"  size="30" placeholder="descreva uma tarefa">
-				<input class="btn-primary" type="submit" value="add">
-			</form>
-			
-		</div>
-		
-		<br/>
-		
-		<span id="stopwatch">00:00:00</span>
+<div ng-controller="tarefaController as listarTarefas">
+	
+	<!--span>{{listarTarefas.remaining()}} de {{listarTarefas.funcionario.Tarefas.length}} restantes</span>
+	
+	[ <a href="" ng-click="listarTarefas.archive()">arquivar</a> ]
+	
+	<br/>
+	<br/>
+	
+	<ul class="unstyled">
+		<li ng-repeat="todo in listarTarefas.funcionario.Tarefas">
+			<input type="checkbox" ng-model="todo.Executada">
+			<span class="done-{{todo.Executada}}">{{todo.Descricao}}</span>
+		</li>
+	</ul-->
+	
+	- Lista de Projetos <br/>
+	- Lista de Histórias <br/>
+	
+	<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>#</th>
+			<th>tarefas (<span>{{listarTarefas.remaining()}} / {{listarTarefas.funcionario.Tarefas.length}}</span>)</th>
+			<th>&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="todo in listarTarefas.funcionario.Tarefas">
+			<td><input type="checkbox" ng-model="todo.Executada"></td>
+			<td>{{todo.Id}}</td>
+			<td class="text-left done-{{todo.Executada}}">{{todo.Descricao}}</td>
+			<td><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
+		</tr>
+	</tbody>
+	</table>
+	
+	<form ng-submit="listarTarefas.addTodo()" class="form-inline">
+		<input type="text" ng-model="listarTarefas.todoText" placeholder="o que precisa ser feito?" class="form-control">
+		<input type="submit" value="adicionar" class="btn btn-default">
+	</form>
+	
+</div>
+
+<!--span id="stopwatch">00:00:00</span-->
