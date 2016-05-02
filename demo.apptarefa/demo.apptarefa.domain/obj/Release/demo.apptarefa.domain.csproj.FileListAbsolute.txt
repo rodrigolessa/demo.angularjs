@@ -1,9 +1,0 @@
-D:\Projetos\demo.angularjs\demo.apptarefa\demo.apptarefa.domain\bin\Release\demo.apptarefa.domain.dll.config
-D:\Projetos\demo.angularjs\demo.apptarefa\demo.apptarefa.domain\bin\Release\demo.apptarefa.domain.dll
-D:\Projetos\demo.angularjs\demo.apptarefa\demo.apptarefa.domain\bin\Release\demo.apptarefa.domain.pdb
-D:\Projetos\demo.angularjs\demo.apptarefa\demo.apptarefa.domain\bin\Release\EntityFramework.dll
-D:\Projetos\demo.angularjs\demo.apptarefa\demo.apptarefa.domain\bin\Release\EntityFramework.SqlServer.dll
-D:\Projetos\demo.angularjs\demo.apptarefa\demo.apptarefa.domain\bin\Release\EntityFramework.xml
-D:\Projetos\demo.angularjs\demo.apptarefa\demo.apptarefa.domain\bin\Release\EntityFramework.SqlServer.xml
-D:\Projetos\demo.angularjs\demo.apptarefa\demo.apptarefa.domain\obj\Release\demo.apptarefa.domain.dll
-D:\Projetos\demo.angularjs\demo.apptarefa\demo.apptarefa.domain\obj\Release\demo.apptarefa.domain.pdb
