@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html ng-app="ldsoft.avaliacao">
+<head>
+
+    <title>LDSoft - Avaliação</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+
+    <link href="/resources/icons/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+
+    <style type="text/css">
+        .content-main {
+            padding-top: 60px;
+        }
+
+            .content-main > h3 {
+                font-weight: bold;
+                padding-bottom: 20px;
+            }
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Avaliação</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/">Home</a></li>
+                    <li><a href="#/usuarioGit">Usuário GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid content-main">
+        <div class="row">
+            <div class="col-md-12">
+                <ng-view></ng-view>
+            </div>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-3.1.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+
+    <script src="app/app.module.js"></script>
+
+    <script src="controllers/usuarioGitController.js"></script>
+    <script src="controllers/usuarioGitDetalheController.js"></script>
+
+    <script src="app/app.config.js"></script>
+
+</body>
+</html>
+

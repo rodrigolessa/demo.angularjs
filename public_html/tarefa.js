@@ -7,11 +7,17 @@ var tarefaController = function ($scope, $http, $rootScope) {
   var idDoFuncionario = $rootScope.idDoFuncionarioLogado;
   
   self.funcionario = {};
+  self.usuarios = {};
   
   // Obtem os dados do funcionário, utilizando API em .Net, que possui lista de tarefas
   $http.get(urlFuncionario + '/' + idDoFuncionario)
     .success(function(result, status, headers, config) {
       self.funcionario = result;
+    });
+
+  $http.get('https://api.github.com/users?since=1')
+    .success(function(result, status, headers, config) {
+      self.usuarios = result;
     });
   
   // Salva nova tarefa

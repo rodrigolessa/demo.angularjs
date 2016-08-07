@@ -1,0 +1,43 @@
+﻿<div ng-controller="usuarioGitDetalheController as detalhes">
+
+    <h3>{{detalhes.titulo}}</h3>
+
+    <table class="table table-striped">
+        <tr>
+            <td>Id:</td>
+            <td>{{detalhes.usuario.id}}</td>
+        </tr>
+        <tr>
+            <td>Login:</td>
+            <td>{{detalhes.usuario.login}}</td>
+        </tr>
+        <tr>
+            <td>URL:</td>
+            <td>{{detalhes.usuario.html_url}}</td>
+        </tr>
+        <tr>
+            <td>Data de cadastro:</td>
+            <td>{{detalhes.usuario.created_at}}</td>
+        </tr>
+    </table>
+
+    <h4>Repositórios:</h4>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="repo in detalhes.repositorios">
+                <td>{{repo.id}}</td>
+                <td>{{repo.name}}</td>
+                <td>{{repo.html_url}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

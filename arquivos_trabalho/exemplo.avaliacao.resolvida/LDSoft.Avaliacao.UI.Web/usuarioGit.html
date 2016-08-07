@@ -1,0 +1,25 @@
+﻿<div ng-controller="usuarioGitController as listar">
+
+    <h3>{{listar.titulo}}</h3>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Login</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="usu in listar.usuarios">
+                <td>{{usu.id}}</td>
+                <td>{{usu.login}}</td>
+                <td>
+                    <a href="#/usuarioGit/{{usu.login}}">
+                        <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
