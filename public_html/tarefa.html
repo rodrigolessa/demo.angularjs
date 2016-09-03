@@ -42,26 +42,5 @@
 		<input type="text" ng-model="listarTarefas.todoText" placeholder="o que precisa ser feito?" class="form-control">
 		<input type="submit" value="adicionar" class="btn btn-default">
 	</form>
-
-	<h2>LIsta de usuários do GitHub</h2>
-
-	<table class="table table-striped">
-	<thead>
-		<tr>
-			<th>Id</th>
-			<th>Login</th>
-			<th>&nbsp;</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr ng-repeat="todo in listarTarefas.usuarios">
-			<td>{{todo.id}}</td>
-			<td>{{todo.login}}</td>
-			<td><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></td>
-		</tr>
-	</tbody>
-	</table>
 	
 </div>
-
-<!--span id="stopwatch">00:00:00</span-->

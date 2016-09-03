@@ -1,4 +1,6 @@
+// angular:Controller Tarefas
 var tarefaController = function ($scope, $http, $rootScope) {
+
   $scope.pagina = "Tarefas";
   
   var self = this;
@@ -15,19 +17,14 @@ var tarefaController = function ($scope, $http, $rootScope) {
       self.funcionario = result;
     });
 
-  $http.get('https://api.github.com/users?since=1')
-    .success(function(result, status, headers, config) {
-      self.usuarios = result;
-    });
-  
   // Salva nova tarefa
   self.addTodo = function() {
     // Add tarefa
     self.funcionario.Tarefas.push(
       {
-        IdFuncionario:idDoFuncionario
-      , Descricao:self.todoText
-      , Executada:false
+          IdFuncionario:idDoFuncionario
+        , Descricao:self.todoText
+        , Executada:false
       });
     // Limpa formulário
     self.todoText = '';
@@ -55,3 +52,6 @@ var tarefaController = function ($scope, $http, $rootScope) {
 
 // Injetando dependência
 tarefaController.$inject = ['$scope', '$http', '$rootScope'];
+
+// Adicionando controller ao module
+app.controller('tarefaController', tarefaController);
